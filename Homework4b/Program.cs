@@ -1,9 +1,14 @@
 ﻿// Test the creation of a BankAccount
 BankAccount account = new BankAccount("Joseph Collado", 100);
-Console.WriteLine("Created a new bank account");
+Console.WriteLine("-----Created a new bank account-----");
 PrintAccountDetails(account);
+Console.WriteLine();
 
-
+// Test depositing to the bank account
+decimal depositAmount = 376.54m;
+account.Deposit(depositAmount);
+Console.WriteLine($"-----Deposited {depositAmount}-----");
+PrintAccountDetails(account);
 
 // Prints the account ID, balance, and transaction history
 void PrintAccountDetails(BankAccount account)
