@@ -45,6 +45,7 @@ public class BankAccount
     //Methods
 
     // Adds the specified amount to the balance and records the transaction
+    // PRECONDITION: amount > 0
     public void Deposit(decimal amount)
     {
         _balance += amount;
@@ -54,6 +55,7 @@ public class BankAccount
     // Attempts to withdraw the specified amount from the balance
     // Records the transaction and returns true if the amount to be withdrawn
     // is less than the current balance. Returns false otherwise.
+    // PRECONDITION: amount > 0
     public bool Withdraw(decimal amount)
     {
         if (amount > _balance)
