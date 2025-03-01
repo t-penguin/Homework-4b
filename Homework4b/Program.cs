@@ -9,6 +9,15 @@ decimal depositAmount = 376.54m;
 account.Deposit(depositAmount);
 Console.WriteLine($"-----Deposited {depositAmount}-----");
 PrintAccountDetails(account);
+Console.WriteLine();
+
+// Test withdrawing from the bank account
+decimal withdrawAmount = 128.52m;
+bool successfulWithdraw = account.Withdraw(withdrawAmount);
+Console.WriteLine($"-----Attempted to withdraw {withdrawAmount}-----");
+Console.WriteLine($"Success: {successfulWithdraw}");
+PrintAccountDetails(account);
+Console.WriteLine();
 
 // Prints the account ID, balance, and transaction history
 void PrintAccountDetails(BankAccount account)
