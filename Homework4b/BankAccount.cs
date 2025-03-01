@@ -50,4 +50,17 @@ public class BankAccount
         _balance += amount;
         _transactions.Add(amount);
     }
+
+    // Attempts to withdraw the specified amount from the balance
+    // Records the transaction and returns true if the amount to be withdrawn
+    // is less than the current balance. Returns false otherwise.
+    public bool Withdraw(decimal amount)
+    {
+        if (amount > _balance)
+            return false;
+        
+        _balance -= amount;
+        _transactions.Add(-amount);
+        return true;
+    }
 }
