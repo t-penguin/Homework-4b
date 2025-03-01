@@ -28,7 +28,7 @@ public class BankAccount
 
     // Properties
     public string AccountID { get { return _accountID; } }
-    public decimal Balance { get { return _balance}}
+    public decimal Balance { get { return _balance; }}
     public List<decimal> Transactions { get { return _transactions; } }
 
     // Constructor
