@@ -19,6 +19,13 @@ Console.WriteLine($"Success: {successfulWithdraw}");
 PrintAccountDetails(account);
 Console.WriteLine();
 
+withdrawAmount = 500;
+successfulWithdraw = account.Withdraw(withdrawAmount);
+Console.WriteLine($"-----Attempted to withdraw {withdrawAmount}-----");
+Console.WriteLine($"Success: {successfulWithdraw}");
+PrintAccountDetails(account);
+Console.WriteLine();
+
 // Prints the account ID, balance, and transaction history
 void PrintAccountDetails(BankAccount account)
 {
