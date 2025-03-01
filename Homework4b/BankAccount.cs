@@ -44,5 +44,10 @@ public class BankAccount
 
     //Methods
 
-
+    // Adds the specified amount to the balance and records the transaction
+    public void Deposit(decimal amount)
+    {
+        _balance += amount;
+        _transactions.Add(amount);
+    }
 }
