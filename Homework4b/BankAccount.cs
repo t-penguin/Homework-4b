@@ -18,3 +18,23 @@ Methods:
 + Deposit(decimal amount)
 + Withdraw(decimal amount) : bool
 */
+
+public class BankAccount
+{
+    // Fields
+    private string _accountID;
+    private decimal _balance;
+    private List<decimal> _transactions;
+
+    // Properties
+    public string AccountID { get { return _accountID; } }
+    public decimal Balance { get { return _balance}}
+    public List<decimal> Transactions { get { return _transactions; } }
+
+    // Constructor
+
+
+    //Methods
+
+
+}
