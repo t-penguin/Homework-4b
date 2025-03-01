@@ -32,7 +32,15 @@ public class BankAccount
     public List<decimal> Transactions { get { return _transactions; } }
 
     // Constructor
-
+    public BankAccount(string customerName, decimal initBalance)
+    {
+        Random rand = new Random();
+        // Adds a random 3-digit number to the 
+        // customer name to account for duplicates
+        _accountID = $"{customerName.Replace(" ", "")}{rand.Next(100, 1000)}";
+        _balance = initBalance;
+        _transactions = new List<decimal>();
+    }
 
     //Methods
 
